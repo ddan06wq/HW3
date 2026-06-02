@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/ico" href="dani_monograma_verde.png">
+</head>
+<body>
+    <header>
+        <div class="rectangle-header">
+            <div>
+                <a href="index.html"><img src="dani_monograma_verde.png" alt="The Site's Logo" class="logo"></a>
+            </div>
+            <a href="contact.html">Contact</a>
+            <a href="#User-Table" class="Skip-Link">User Submits</a>
+        </div>
+    </header>
+
+    <main class="card-grid">
+        <div class="card contact-card">
+            <form class="project-form" id="projectForm" novalidate>
+                <fieldset>
+                    <div class="Name-Image">
+                        <div class="input-group" style="flex: 2; margin-bottom: 0;">
+                            <label for="pName">Name</label>
+                            <input type="text" id="pName" placeholder="Name of your Project" required aria-required="true">
+                            <span class="error-msg" id="err-pName"></span>
+                        </div>
+
+                        <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                            <label for="pImg">Image Upload</label>
+                            <input type="file" class="Image-button" id="pImg" accept="image/*">
+                            <span class="error-msg" id="err-pImg"></span>
+                        </div>
+                    </div>    
+                    <div class="input-group">
+                        <label for="pDesc">Description</label>
+                        <textarea name="message" id="pDesc" rows="5" placeholder="Write your message here..." required></textarea>
+                        <span class="error-msg" id="err-pDesc"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="pUrl">URL</label>
+                        <input type="text" id="pUrl" placeholder="e.g: www.youtube.com" required>
+                        <span class="error-msg" id="err-pUrl"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="pTech">Coding Language Used</label>
+                        <select name="pTech" id="pTech" required>
+                            <option value="">Select Language</option>
+                            <option value="C/C++">C/C++</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="error-msg" id="err-pTech"></span>
+                    </div>
+
+                    <div class ="input-group">
+                        <label for="pDate">Date</label>
+                        <input type="Date" id="pDate" required>
+                        <span class="error-msg" id="err-pDate"></span>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" class="send-button">Add Project</button>
+                        <button type="reset" class="reset-button">Reset</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <section class="project-section" id="User-Table">
+            <h2>User Submitted Projects</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Thumbnail</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Language Used</th>
+                            <th scope="col">Date of Completion</th>
+                        </tr> <!-- Fixed structural close tag -->
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr id="emptyRow">
+                            <td colspan="6"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="Form.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Paragraful A primeste proprietatea de la "p",este un element selector, nu are nici clasa, nici id.
+Paragraful B primeste proprietatea de la ".info", deoarece este specificata un class selector.
+Paragraful C primeste proprietatea de la "#warning", pentru ca primeste un id selector
+Paragraful D primeste un id selector. Browserul decide sa foloseasca culoarea "darkorange"
+din cauza ca scorul de specificity este egal intre "#warning" si "warning.info" asa ca alege ultimul lucru declarat in css. 
+H1 ia atributele din "style.css", insa culoarea este luata din css-ul intern deoarce are prioritate fata de css extern(style.css).
